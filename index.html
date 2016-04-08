@@ -27,18 +27,19 @@
 
 
 		<div id="map-wrapper">
+			<button id="reset" onclick="resetStates();">Reset States</button>
 			<svg width="750" height="500">
 				<g ng-repeat="state in states" ng-click="stateClicked(state)">
 					<path class="state {{state.stateColor}}" ng-attr-d="{{state.vector}}" stroke="white">	
 					</path>
-					<foreignObject ng-attr-x="{{state.nameX}}" ng-attr-y="{{state.nameY}}">
+					<foreignObject ng-attr-x="{{state.nameX}}" ng-attr-y="{{state.nameY}}" >
 						<div class="state-info">{{state.abbr}}<br />{{state.electoralVotes}}</div>
 
 					</foreignObject>
 					
 						<table>
-							<tr ng-repeat="state in states | filter: isSmall = true">
-								<td>{{state.electoralVotes}}</td>
+							<tr ng-repeat="state in states | filter: isSmall = true" ng-click="stateClicked(state)">
+								<td class="state {{state.stateColor}}">{{state.electoralVotes}}</td>
 								<td>{{state.abbr}}</td>
 							</tr>
 

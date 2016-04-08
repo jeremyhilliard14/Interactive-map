@@ -78,8 +78,15 @@ table{
 	left: 650px;
 	color: white;
 	float: right;
+	font-size: 20px;
 }
 
+button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 18px;
+}
 
 
 

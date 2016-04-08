@@ -15,7 +15,7 @@ function State(id,name,abbr,stateColor,electoralVotes,nameX, nameY,vector, isSma
 function resetStates(){
     //init arrays
     //states = vector and data info
-    console.log("AHH");
+    // console.log("AHH");
 
     states = [];
     //Separate array for state, by color
@@ -80,6 +80,7 @@ function resetStates(){
     for(i=0; i<states.length; i++){
         if(states[i].stateColor == 'blue'){
             blueStates[states[i].id] = states[i];
+            //document.getElementByClassName('small-vote').style.color='blue';
         }else if(states[i].stateColor == 'red'){
             redStates[states[i].id] = states[i];
             //console.log(redStates);
@@ -97,5 +98,5 @@ function resetStates(){
     }
     
     numStates = states.length;
-
+    console.log("AHH");
 }
