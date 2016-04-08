@@ -4,6 +4,8 @@ interactiveMap.controller('interactiveMapController', function($scope){
 
 	resetStates();
 	$scope.states = states;
+	$scope.smallStates = smallStates;
+	console.log(smallStates);
 	calculateStateTotals();
 
 	$scope.stateClicked = function(state){

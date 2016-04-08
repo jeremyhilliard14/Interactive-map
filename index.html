@@ -22,7 +22,9 @@
 				<div id="open-bar" class="bar open-bar" ng-style="{'width':openWidth}">{{openStateVotes}}</div>
 				<div id="red-bar" class="bar red-bar" ng-style="{'width':redWidth}">{{redStateVotes}}</div>
 			</div>
+			<!-- <button onclick="resetStates">Reset Map</button> -->
 		</div>
+
 
 		<div id="map-wrapper">
 			<svg width="750" height="500">
@@ -32,7 +34,19 @@
 					<foreignObject ng-attr-x="{{state.nameX}}" ng-attr-y="{{state.nameY}}">
 						<div class="state-info">{{state.abbr}}<br />{{state.electoralVotes}}</div>
 
-						</foreignObject>
+					</foreignObject>
+					
+						<table>
+							<tr ng-repeat="state in states | filter: isSmall = true">
+								<td>{{state.electoralVotes}}</td>
+								<td>{{state.abbr}}</td>
+							</tr>
+
+						</table>
+						
+					
+
+
 				</g>
 			</svg>
 		</div>
