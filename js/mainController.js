@@ -59,4 +59,7 @@ interactiveMap.controller('interactiveMapController', function($scope){
 	$scope.openWidth = (($scope.openStateVotes / 538) * 100) + '%'; 
 	console.log($scope.blueStateVotes);
 
+
+
 })
+
