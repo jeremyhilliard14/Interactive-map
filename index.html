@@ -27,7 +27,7 @@
 
 
 		<div id="map-wrapper">
-			<button id="reset" onclick="resetStates();">Reset States</button>
+			<button id="reset" ng-click="resetStates();">Reset States</button>
 			<svg width="750" height="500">
 				<g ng-repeat="state in states" ng-click="stateClicked(state)">
 					<path class="state {{state.stateColor}}" ng-attr-d="{{state.vector}}" stroke="white">	

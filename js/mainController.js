@@ -8,6 +8,14 @@ interactiveMap.controller('interactiveMapController', function($scope){
 	console.log(smallStates);
 	calculateStateTotals();
 
+	$scope.resetStates = function(){
+		resetStates();
+		calculateStateTotals();
+		$scope.states = states;
+		$scope.neededRedVotes = neededRedVotes;
+		$scope.neededBlueVotes = neededBlueVotes;
+	}
+
 	$scope.stateClicked = function(state){
 		var newColor = getNewColor(state);
 		//calculateStateTotals();
